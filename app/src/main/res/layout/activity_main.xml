@@ -13,11 +13,25 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/filterBtn"
+        app:layout_constraintEnd_toStartOf="@id/priceFilterET"
         android:inputType="text"
         android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="8dp"/>
+        android:layout_marginEnd="8dp"
+        android:hint="@string/hint_city"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/priceFilterET"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/cityFilterET"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/filterBtn"
+        android:inputType="number"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:hint="@string/hint_price"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/filterBtn"

@@ -25,8 +25,22 @@ class MainActivity : AppCompatActivity() {
 
         binding.filterBtn.setOnClickListener {
             val city = binding.cityFilterET.text.toString()
+            val price = binding.priceFilterET.text.toString()
+            var priceFilter = 0
+            if (price.isNotEmpty()){
+                priceFilter = price.toInt()
+            }
 
-            val filteredEvents = events.filter { event -> (event.city ?: "").contains(city, true)}
+            val filteredEvents = events.filter { event ->
+                val matchesCityFilter = (event.city ?: "").contains(city, true)
+                if(!matchesCityFilter){
+                    return@filter false
+                }else if(priceFilter != 0){
+                    return@filter (event.price ?: 0) < priceFilter
+                }else{
+                    return@filter matchesCityFilter
+                }
+            }
             eventsAdapter.refill(filteredEvents)
         }
     }
