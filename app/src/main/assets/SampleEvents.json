@@ -1,0 +1,62 @@
+[
+  {
+    "id": 4422829,
+    "artiste": "Backstreet Boys",
+    "city": "Camden",
+    "price": 23
+  },
+  {
+    "id": 4422826,
+    "artiste": "Backstreet Boys",
+    "city": "Hartford",
+    "price": 20
+  },
+  {
+    "id": 8621837,
+    "artiste": "Justin Bieber",
+    "city": "Glasgow",
+    "price": 97
+  },
+  {
+    "id": 8621843,
+    "artiste": "Justin Bieber",
+    "city": "London",
+    "price": 138
+  },
+  {
+    "id": 6216095,
+    "artiste": "Elton John",
+    "city": "Cleveland",
+    "price": 133
+  },
+  {
+    "id": 6222261,
+    "artiste": "Elton John",
+    "city": "Chicago",
+    "price": 91
+  },
+  {
+    "id": 10278327,
+    "artiste": "Daddy Yankee",
+    "city": "San Jose",
+    "price": 130
+  },
+  {
+    "id": 150100779,
+    "artiste": "Lil Baby",
+    "city": "West Palm Beach",
+    "price": 19
+  },
+  {
+    "id": 150096789,
+    "artiste": "Chris Brown",
+    "city": "Tampa",
+    "price": 28
+  },
+  {
+    "id": 4430490,
+    "artiste": "Run The Jewels",
+    "city": "Tampa",
+    "price": 95
+  }
+]
