@@ -11,6 +11,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var events: ArrayList<StubhubData>
     private lateinit var binding: ActivityMainBinding
+    private lateinit var eventsAdapter: EventsAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,7 +20,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(view)
 
         events = getEventsFromJson()
-        binding.testTV.text = "Found ${events.size} Events"
+        eventsAdapter = EventsAdapter(events)
+        binding.eventsRV.adapter = eventsAdapter
     }
 
     private fun getEventsFromJson(): ArrayList<StubhubData> {
