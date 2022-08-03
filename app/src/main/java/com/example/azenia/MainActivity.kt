@@ -22,6 +22,13 @@ class MainActivity : AppCompatActivity() {
         events = getEventsFromJson()
         eventsAdapter = EventsAdapter(events)
         binding.eventsRV.adapter = eventsAdapter
+
+        binding.filterBtn.setOnClickListener {
+            val city = binding.cityFilterET.text.toString()
+
+            val filteredEvents = events.filter { event -> (event.city ?: "").contains(city, true)}
+            eventsAdapter.refill(filteredEvents)
+        }
     }
 
     private fun getEventsFromJson(): ArrayList<StubhubData> {

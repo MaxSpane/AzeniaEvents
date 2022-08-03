@@ -21,6 +21,11 @@ class EventsAdapter(
     override fun getItemCount(): Int =
         dataset.size
 
+    fun refill(dataset: List<StubhubData>){
+        this.dataset = dataset
+        notifyDataSetChanged()
+    }
+
     inner class EventsViewHolder(private val binding: ItemEventBinding)
         : RecyclerView.ViewHolder(binding.root){
 
